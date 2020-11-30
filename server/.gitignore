@@ -1,0 +1,14 @@
+# npm
+node_modules
+*.log
+*.gz
+
+# Logs
+logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# dotenv environment variables file
+.env
+.env.test

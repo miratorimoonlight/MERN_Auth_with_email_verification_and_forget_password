@@ -2,9 +2,10 @@
   "name": "mern_auth_with_email_verification_and_forget_password",
   "version": "1.0.0",
   "description": "This is project shows how authentication (username/email, password) and user role works. And how account verification and forget password is implemented.",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server/server.js",
     "heroku-postbuild": "concurrently 'cd server && npm install' 'cd client && npm install && npm run build' "
   },
   "repository": {

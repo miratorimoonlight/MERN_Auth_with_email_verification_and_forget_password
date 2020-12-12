@@ -1,7 +1,7 @@
 //A bunch of API call to the server (all are async functions)
 const AuthService = {
     login: function(userInfo) {
-        return fetch("http://localhost:5000/login", 
+        return fetch("/api/login", 
             {
                 method: 'POST',
                 body: JSON.stringify(userInfo),
@@ -19,7 +19,7 @@ const AuthService = {
     },
 
     register: function (userInfo) {
-        return fetch("http://localhost:5000/register", 
+        return fetch("/api/register", 
             {
                 method: 'POST',
                 body: JSON.stringify(userInfo),
@@ -33,7 +33,7 @@ const AuthService = {
     },
 
     logout: function() {
-        return fetch("http://localhost:5000/logout", 
+        return fetch("/api/logout", 
             {
                 credentials: 'include'
             })
@@ -42,7 +42,7 @@ const AuthService = {
     },
 
     isAuthenticated: function() {
-        return fetch("http://localhost:5000/authenticated", 
+        return fetch("/api/authenticated", 
             {
                 credentials: 'include'
             })
@@ -56,7 +56,7 @@ const AuthService = {
 
     //............Email Verification Related.............//
     activateAcc: function(activationToken) {
-        return fetch("http://localhost:5000/activateAcc", 
+        return fetch("/api/activateAcc", 
             {
                 method: 'POST',
                 body: JSON.stringify({activationToken}),
@@ -69,7 +69,7 @@ const AuthService = {
     },
 
     sendNewVerificationLink: function() {
-        return fetch("http://localhost:5000/sendNewVerificationLink",
+        return fetch("/api/sendNewVerificationLink",
             {
                 method: 'POST',
                 credentials: 'include',
@@ -80,7 +80,7 @@ const AuthService = {
 
     //............Forgot Password Related.............//
     forgotPassword: function(email) {
-        return fetch("http://localhost:5000/forgotPassword",
+        return fetch("/api/forgotPassword",
             {
                 method: 'POST',
                 body: JSON.stringify({email}),
@@ -94,7 +94,7 @@ const AuthService = {
     
     resetPassword: function(userInput) {
         const {password, resetToken} = userInput;
-        return fetch("http://localhost:5000/resetPassword",
+        return fetch("/api/resetPassword",
             {
                 method: 'POST',
                 body: JSON.stringify({password, resetToken}),

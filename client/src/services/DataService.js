@@ -1,6 +1,6 @@
 const DataService = {
     fetchData: function() {
-        return fetch("http://localhost:5000/protectedData", {credentials: 'include'})
+        return fetch("/api/protectedData", {credentials: 'include'})
                 .then(res => {
                     if(res.status !== 401)
                         return res.json().then(jsonData => jsonData)
@@ -9,7 +9,7 @@ const DataService = {
                 })
     },
     fetchAdminData: function() {
-        return fetch("http://localhost:5000/admin/protectedData", {credentials: 'include'})
+        return fetch("/api/admin/protectedData", {credentials: 'include'})
                 .then(res => {
                     if(res.status !== 401)
                         return res.json().then(jsonData => jsonData)

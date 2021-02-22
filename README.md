@@ -1,5 +1,7 @@
 ### Introduction
-This branch is for deployment on heroku
+This branch is for deployment on heroku.
+
+The DEMO is [here](https://mern-auth-with-username.herokuapp.com/) 👈👈. CLICK AND CHECK IT!!
 
 Technologies used: MERN
 
